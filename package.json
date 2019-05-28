@@ -1,15 +1,18 @@
 {
-  "name": "style-cookies",
-  "version": "0.0.1",
-  "description": "Using cookies to tell the server not to deliver inline styles anymore.",
-  "main": "index.js",
+  "name": "inline-cacher",
+  "version": "0.1.0",
+  "description": "Improve performance by caching inline styles. The best of both worlds!",
+  "main": "dist/inline-cacher.min.js",
   "scripts": {
+    "build": "uglifyjs dist/inline-cacher.js -o dist/inline-cacher.min.js -c -m",
+    "start": "node test/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "cookie-parser": "^1.4.4",
-    "express": "^4.17.0"
+    "express": "^4.17.0",
+    "uglify-js": "^3.5.15"
   }
 }
