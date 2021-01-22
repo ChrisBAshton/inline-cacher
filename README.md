@@ -2,6 +2,8 @@
 
 Improve performance by caching inline styles. The best of both worlds!
 
+This is an NPM implementation of the [Inline Cache methodology](https://github.com/ChrisBAshton/inline-cache).
+
 ## How does it work?
 
 InlineCacher looks for all inline `<style>` tags on the page and stores their contents in localStorage. It then sets a cookie so that the server can detect subsequent page requests and avoid rendering the inline styles again. On subsequent pages, InlineCacher injects the cached styles into the page.
